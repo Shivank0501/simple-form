@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+</head>
+<body>
+<form action="/update-profile" method="post">
+    <label for="login">Username:</label>
+    <input type="text" id="login" name="login" th:value="${user.login}" required><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="Gender">
+        <option value="MALE" th:selected="${user.gender == 'MALE'}">Male</option>
+        <option value="FEMALE" th:selected="${user.gender == 'FEMALE'}">Female</option>
+    </select><br>
+
+    <label for="mobile">Mobile:</label>
+    <input type="text" id="mobile" name="mobile" th:value="${user.mobile}" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="Email" th:value="${user.email}" required><br>
+
+    <button type="submit">Update Profile</button>
+</form>
+
+</body>
+</html>

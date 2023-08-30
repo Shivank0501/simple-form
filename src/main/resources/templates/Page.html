@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+
+
+<h2> Welcome to the web Page <span th:text="${userLogin}"></span></h2>
+<a href="#"> Property Tax</a>
+<br>
+<a href="#"> Birth & Death Certificate</a>
+<br><br>
+
+<form action="/logout" method="get">
+    <button type="submit">Logout</button>
+</form>
+<br><br>
+<a href="/edit-profile">Edit Profile</a>
+
+
+</body>
+</html>
